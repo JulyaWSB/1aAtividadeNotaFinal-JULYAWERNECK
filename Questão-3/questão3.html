@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato</title>
+</head>
+
+<style>
+  h2 {
+    text-align: center;
+  }
+
+  .formulario {
+    background-color: rgb(236, 216, 255);
+    border: 1px solid #000000;
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  button {
+    padding: 10px 25px;
+    background-color: rgb(202, 156, 246);
+    border-radius: 15px;
+  }
+
+  input,
+  textarea {
+    background-color: rgba(201, 201, 201, 0.792);
+    height: 40px;
+    border-radius: 20px;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    color: rgb(0, 0, 0);
+    border: 1px solid #000000;
+  }
+</style>
+
+<body>
+  <h2>Formulário de Contato</h2>
+  <div class="formulario">
+    <form id="formulario" onsubmit="envio(event)">
+      <p>Nome:</p>
+      <input type="text" id="name" name="name" placeholder="Nome" required> <br><br>
+
+      <p>Email:</p>
+      <input type="email" id="email" name="email" placeholder="Email"> <br><br>
+
+      <p>Mensagem:</p>
+      <textarea id="message" name="message" required></textarea> <br><br>
+
+      <button type="submit">Enviar</button>
+
+      <p id="sucesso"></p>
+      <p id="erro"></p>
+    </form>
+  </div>
+  <script>
+    function validaEmail(email) {
+      const regexpToEmail = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)$/;
+      return regexpToEmail.test(email);
+    }
+
+    function envio(event) {
+      event.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const sucesso = document.getElementById('sucesso');
+      const erro = document.getElementById('erro');
+
+      sucesso.textContent = '';
+      erro.textContent = '';
+
+      if (validaEmail(email)) {
+        sucesso.textContent = "Seu formulário foi enviado com sucesso!";
+      } else {
+        erro.textContent = "Por favor, insira um e-mail válido.";
+      }
+    }
+
+    document.getElementById('formulario').addEventListener('submit', envio);
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela de Preços</title>
+</head>
+
+<style>
+  h1 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 50px;
+  }
+
+  .title h2 {
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  .title {
+    margin: auto;
+    width: 750px;
+    background-color: #ffc0cb;
+    border-radius: 9px;
+  }
+
+  .tabela {
+    margin: auto;
+    margin-bottom: 20px;
+  }
+
+  .tabela,
+  th,
+  td {
+    border-collapse: collapse;
+    padding: 10px;
+    border: 1px solid rgb(49, 49, 49);
+  }
+
+  .produto {
+    text-align: center;
+  }
+
+  th {
+    background-color: rgb(255, 255, 60);
+    font-weight: 900;
+    text-transform: uppercase;
+  }
+
+  tr:nth-child(odd) {
+    background-color: rgba(249, 248, 167, 0.803);
+  }
+
+  tr:nth-child(even) {
+    background-color: rgb(252, 252, 231);
+  }
+
+  .contact {
+    background-color: #ffc0cb;
+    text-align: center;
+    width: 750px;
+    padding: 40px 0 40px 0;
+    margin: auto;
+    border-radius: 6px;
+  }
+</style>
+
+<body>
+  <header>
+    <div class="title">
+      <h1>Ducky Doces</h1>
+      <h2>Confeitaria Artesanal</h2>
+    </div>
+  </header>
+  <table class="tabela">
+    <tr>
+      <th>Produto</th>
+      <th>Categoria</th>
+      <th>Descrição</th>
+      <th>Preço</th>
+    </tr>
+    <tr>
+      <td class="produto">Brigadeiros</td>
+      <td>Doce Simples</td>
+      <td>Temos 10 opções de sabores</td>
+      <td>R$ 2,50 (Und.)</td>
+    </tr>
+    <tr>
+      <td class="produto">Tortas</td>
+      <td>Doce Fino</td>
+      <td>Temos 3 opções de sabores e 2 tamanhos</td>
+      <td>R$ 7,00 (Und. (pequena))</td>
+    </tr>
+    <tr>
+      <td class="produto">Bombom na Travessa</td>
+      <td>Doce Fino</td>
+      <td>Temos 2 opções de sabores e 2 tamanhos</td>
+      <td>R$ 70,00 (Und (grande))</td>
+    </tr>
+    <tr>
+      <td class="produto">Mousse</td>
+      <td>Doce Simples</td>
+      <td>Temos 5 opções de sabores e 3 tamanhos</td>
+      <td>R$ 40,00 (Und (grande))</td>
+    </tr>
+  </table>
+
+  <div class="contact">
+    <h2>Gostou do nosso trabalho?</h2>
+    <p>Instagram: @ducky_doces</p>
+    <p>Telefone: (21) 9 7491-5528</p>
+  </div>
+</body>
+
+</html>
